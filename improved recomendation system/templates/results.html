@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Salman & Bhatti Search Engine</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	body{
+		background-image: url('static/23.png');
+		background-size: cover;
+	}
+    .sb{
+        color: #A6ACAF;
+    }
+
+</style>
+
+<body>
+	<div class="container pt-5">
+  	<div class="row">
+    		<div class="col-8 offset-2" style="background: white; box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75); border-radius: 25px;">
+    		  <div class="row pt-3 pb-3">
+                  <div class="col-6">
+                      <img src="{{ movie[2] }}" class="img-fluid">
+                  </div>
+                  <div class="col-6">
+                        <h4 class="card-title">{{ movie[0] }}</h4>
+    
+                            <p class="sb">Rating : {{ movie[3] }}</p>
+                            <p class="card-text">{{ movie[1] }}</p>      
+                  </div>
+              </div>
+    	    </div>
+    </div>
+    <div class="row pt-3">
+        <div class="span6" style="float: none; margin: 0 auto;">
+            <h1 style="color: white;">Recommended Movies</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" style="background: white; box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75); border-radius: 25px;">
+            <div class="d-flex justify-content-center">
+                {%for i in range(0, 6)%}
+                <div class="p-2">
+                    <img src="{{ moviesList[i][2] }}" style="height: 100px; width: 100px">
+                    <a href="/sendbyGet/{{ moviesList[i][1] }}"><p>{{ moviesList[i][1] }}</p></a>
+                </div>
+                {%endfor%} 
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

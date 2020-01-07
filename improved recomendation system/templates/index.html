@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Salman & Bhatti Search Engine</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.sb{
+		position: relative;
+		top: 38vh;
+	}
+	body{
+		background-image: url('static/23.png');
+		background-size: cover;
+	}
+
+</style>
+
+<body>
+	<div class="container sb">
+  	<div class="row pb-4">
+    		<div class="span6" style="float: none; margin: 0 auto;">
+    		<h1 style="color: white;">Salman And Bhatti Search Engine</h1>
+    		<p style="color: white;">Special Thanks to Uzair and Waleed for leaving our group</p>
+    		<form method="POST" action="/send">
+    		<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Search for Movies" name="name">
+    	    </div>
+	</div>
+	{% if movieFound==1 %}
+	<div class="alert alert-danger" role="alert">
+		<strong>Oh snap!</strong> The movie you searched for does not exist. Please try again.
+	</div>	 
+	{% endif %} 
+    <div class="row">
+    	<div class="span6" style="float: none; margin: 0 auto;">
+    	    	<button type="submit" class="btn btn-info">Search</button>
+    	    </form>
+    	    </div>
+    </div>
+</div>
+
+</body>
+</html>
